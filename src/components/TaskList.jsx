@@ -15,14 +15,16 @@ export const TaskList = () => {
   };
 
   return (
-    <div className="flex items-center justify-center min-h-screen">
+    <div className="flex items-start justify-center">
       <ul className="flex flex-wrap justify-center gap-8">
         {tasks.map((task) => (
           <li className="grid gap-4 p-8 text-center border-2" key={task.id}>
-            {task.title}{" "}
-            <div>
-            <DeleteButton handleDelete={handleDelete} task={task}/>
-            <UpdateButton handleUpdate={handleUpdate} task={task}/>
+            <span className="max-w-xs p-4 text-2xl rounded bg-slate-100">
+              {task.title}{" "}
+            </span>
+            <div className="flex justify-center gap-4">
+              <DeleteButton handleDelete={handleDelete} task={task} />
+              <UpdateButton handleUpdate={handleUpdate} task={task} />
             </div>
           </li>
         ))}
