@@ -1,7 +1,7 @@
 export const DeleteButton = ({ handleDelete, task }) => {
   return (
     <button
-      className="px-4 py-2 font-bold text-white border-2 rounded hover:bg-slate-700"
+      className="border-2 hover:bg-slate-700"
       onClick={() => handleDelete(task.id)}
     >
       Delete
@@ -12,7 +12,7 @@ export const DeleteButton = ({ handleDelete, task }) => {
 export const UpdateButton = ({ handleUpdate, task }) => {
   return (
     <button
-      className="px-4 py-2 font-bold text-white rounded bg-slate-600 hover:bg-slate-700"
+      className=" bg-slate-600 hover:bg-slate-700"
       onClick={() =>
         handleUpdate(task.id, { id: task.id, title: "Updated Task" })
       }
@@ -25,7 +25,7 @@ export const UpdateButton = ({ handleUpdate, task }) => {
 export const AddButton = ({ handleAddTask }) => {
   return (
     <button
-      className="px-4 py-2 font-bold text-white bg-blue-500 rounded hover:bg-blue-700"
+      className=" bg-slate-800 hover:bg-slate-900"
       onClick={handleAddTask}
     >
       Add Task
